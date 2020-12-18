@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-"""**Administration Commands**\n\n
+"""
 {i}setgpic <reply to image>
 **Usage**: Set replied Image as Group Profile pic\n
 {i}promote reply to UserMsg or @username <CustomAdmintag>
