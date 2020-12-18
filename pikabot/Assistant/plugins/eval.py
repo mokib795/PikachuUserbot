@@ -8,11 +8,22 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
-
-from Asst_modules import _eval
+"""
+{i}bash <cmd> 
+*"Usage**: For executing linux/Gnu Commands\n 
+{i}eval <code> 
+*"Usage**: For executing short python codes\n
+"""
+from Asst_modules import _eval, _bash 
 from pikabot.utils import pikatgbot
 
-@ItzSjDude(pika=True, pattern="eval")
-@pikatgbot('Owner')
+
+@ItzSjDude(pika=True, pattern="bash ?(.*)")
+@pikatgbot('OwnSudo')
+async def _(event):
+    await _bash(event)
+
+@ItzSjDude(pika=True, pattern="eval ?(.*)")
+@pikatgbot('OwnSudo')
 async def _(event):
   await _eval(event)
