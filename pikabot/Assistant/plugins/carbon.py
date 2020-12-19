@@ -3,7 +3,7 @@
 {i}carbon <reply to message>
 """
 
-from Assist_Modules import _carbon
+from Asst_modules import _carbon
 
 
 @ItzSjDude(pika=True, pattern="carbon (?: |$)(.*)")
