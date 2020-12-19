@@ -5,7 +5,7 @@
 **Usage**: Get full User information
 """
 
-from Assist_Modules import _getinfo, _getid
+from Asst_modules import _getinfo, _getid
 
 @ItzSjDude(pika=True, pattern="info(.*)")
 @pikatgbot('AmIAdm')
