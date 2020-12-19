@@ -8,7 +8,7 @@
 {i}restart
 **Usage**: Restarts Pikabot"""
 
-from Assist_Modules import _dyno, _logs, _restart, _vars
+from Asst_modules import _dyno, _logs, _restart, _vars
 
 @ItzSjDude(pika=True, pattern=r"(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
 @pikatgbot('OwnSudo')
