@@ -4,7 +4,7 @@ Available Commands:
 {i}tm <as reply to a media>
 {i}tt <as reply to a large text>
 """
-from Assist_Modules import _invite, _telegraph, apk
+from Asst_modules import _invite, _telegraph, apk
 
 @ItzSjDude(pika=True, pattern="app (.*)")
 @pikatgbot('AdmOnly')
