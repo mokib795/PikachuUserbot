@@ -10,7 +10,7 @@
 # All rights reserved 
 #
 # Made by @ItzSjDude for Pikabot
-
+from pikabot import pikalog
 from sqlalchemy import *
 from . import SESSION, BASE
 
