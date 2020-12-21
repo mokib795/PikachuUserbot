@@ -9,7 +9,7 @@
 `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`
 """
 
-from . import ChatAction, _welcome, del_welcm, get_welcm, set_wlcm, tgbot, pikatgbot
+from Asst_modules import ChatAction, _welcome, del_welcm, get_welcm, set_wlcm, tgbot, pikatgbot
 
 
 @tgbot.on(ChatAction)
