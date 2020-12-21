@@ -51,13 +51,13 @@ def upd_prev_welcome(chat_id, pika_id, prev_wc):
 
 def get_welcome(chat_id, pika_id):
     try:
-        return SESSION.query(Welcome).filter((Welcome.chat_id == str(chat_id), Welcome.pika_id == pika_id)).one()
+        return SESSION.query(Welcome).get(str(chat_id), pika_id).one()
     except:
         return None
     finally:
         SESSION.close()
 
 def clean_welcome(chat_id, pika_id, cl_wc):
-    get = SESSION.query(Welcome).get(chat_id, pika_id)
-    get.cl_wc = cl_wc
+    clnn = SESSION.query(Welcome).get(chat_id, pika_id)
+    clnn.cl_wc = cl_wc
     SESSION.commit()
