@@ -19,3 +19,6 @@ def pika_db_reset():
     pikafilter.drop()
     pikasnip.drop()
     pikawelcm.drop()
+
+def pika_welcome(): 
+    pikawelcm.drop()
