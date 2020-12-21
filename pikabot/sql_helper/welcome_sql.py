@@ -52,8 +52,9 @@ def upd_prev_welcome(chat_id, pika_id, prev_wc):
 def get_welcome(chat_id, pika_id):
     try:
         return SESSION.query(Welcome).get(str(chat_id), pika_id).one()
-    except:
-        return None
+    except Exception as e:
+        pikalog.error(str(e))
+        return 
     finally:
         SESSION.close()
 
