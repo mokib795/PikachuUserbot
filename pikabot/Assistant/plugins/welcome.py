@@ -9,7 +9,7 @@
 `{mention}, {title}, {count}, {first}, {last}, {fullname}, {userid}, {username}, {my_first}, {my_fullname}, {my_last}, {my_mention}, {my_username}`
 """
 
-from Asst_modules import ChatAction, _welcome, del_welcm, get_welcm, set_wlcm, tgbot, pikatgbot
+from Asst_modules import ChatAction, _welcome, del_welcm, get_welcm, set_wlcm, clean_welcome, tgbot, pikatgbot
 
 
 @tgbot.on(ChatAction)
@@ -33,3 +33,8 @@ async def _(_pika):
 @pikatgbot("OwnSudo")
 async def _(_pika):
     await del_welcm(_pika)
+
+@ItzSjDude(pika=True, pattern="cleanwelcome$")
+@pikatgbot("OwnSudo")
+async def _(_pika):
+    await clean_welcm(_pika)
