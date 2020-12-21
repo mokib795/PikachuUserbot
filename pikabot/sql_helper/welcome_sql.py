@@ -41,7 +41,7 @@ def add_welcome(chat_id, pika_id, cust_wc, cl_wc, prev_wc, mf_id):
 def remove_welcome(chat_id, pika_id):
     rm_wc = SESSION.query(Welcome).get((str(chat_id), pika_id))
     if rm_wc:
-        SESSION.delete(rem)
+        SESSION.delete(rm_wc)
         SESSION.commit()
 
 def upd_prev_welcome(chat_id, pika_id, prev_wc):
