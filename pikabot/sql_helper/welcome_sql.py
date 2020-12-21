@@ -56,3 +56,8 @@ def get_welcome(chat_id, pika_id):
         return None
     finally:
         SESSION.close()
+
+def clean_welcome(chat_id, pika_id, cl_wc):
+    get = SESSION.query(Welcome).get(chat_id, pika_id)
+    get.cl_wc = cl_wc
+    SESSION.commit()
