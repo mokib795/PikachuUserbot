@@ -18,81 +18,102 @@ if bot is None:
     _Pika_Loop_ = asyncio.get_event_loop()
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
+    _const= {} 
     l= Var.CUSTOM_CMD
     from pikabot import tgbot 
     from pikabot.login import pika_login
+    _logstr_ = "_{}_: Connected 🔥"
+    _logstr2_ = "_{}_: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
-        if bot: 
-            try: 
-                 await bot.start()
-                 pikalog.info("_MAINCLIENT_: Connected 🔥")
-                 bot.me = await bot.get_me() 
-                 bot.pika_cmd = {} 
-                 bot.uid = telethon.utils.get_peer_id(bot.me)
-            except:
-                 pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-                 await pika_login("STRING_SESSION")
-        if bot2:
-            try:
-                await bot2.start()
-                pikalog.info("_MULTICLIENT1_: Connected 🔥")
-                bot2.me = await bot2.get_me() 
-                bot2.uid = telethon.utils.get_peer_id(bot2.me)
-            except:
-                pikalog.info("_MULTICLIENT1_: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-                await pika_login("STR2")
-        if bot3:
-            try:
-                await bot3.start()
-                pikalog.info("_MULTICLIENT2_: Connected 🔥")
-                bot3.me = await bot.get_me() 
-                bot3.uid = telethon.utils.get_peer_id(bot3.me)
-            except:
-                pikalog.info("_MULTICLIENT2_: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-                await pika_login("STR3")
-        if bot4:
-            try:
-                await bot4.start()
-                pikalog.info("_MULTICLIENT3_: Connected 🔥")
-                bot4.me = await bot4.get_me() 
-                bot4.uid = telethon.utils.get_peer_id(bot4.me)
-            except:
-                pikalog.info("_MULTICLIENT3_: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-                await pika_login("STR4")
-
         if tgbot: 
-                await tgbot.start()
-                tgbot.me = await tgbot.get_me()
-                tgbot.uid = telethon.utils.get_peer_id(tgbot.me)
- 
-        if Var.STR1 and bot is None:
-           try:
-              await bot.start()
-           except:
-              pikalog.info("**MAINCLIENT**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-              await pika_login("STRING_SESSION")
+            await tgbot.start()
+            tgbot.me = await tgbot.get_me()
+            pikalog.info(_logstr_)
+            msg = _logstr_.format("_TGBOT_")
+            _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
+            tgbot.uid = telethon.utils.get_peer_id(tgbot.me)
+            if bot: 
+                try: 
+                   await bot.start()
+                   bot.me = await bot.get_me() 
+                   bot.pika_cmd = {} 
+                   bot.uid = telethon.utils.get_peer_id(bot.me)
+                   pikalog.info(_logstr_.format("MAINCLIENT")
+                   msg+ = _logstr_.format("MAINCLIENT") + "\n\n"
+                   await pika_msg(_logpika, msg)
+                except:
+                   pikalog.info(_logstr2_.format("MAINCLIENT")
+                   msg+ = _logstr2_.format("MAINCLIENT") + "\n\n"
+                   await pika_msg(_logpika, msg) 
+                   await pika_login("STRING_SESSION")
+            if bot2:
+                try:
+                   await bot2.start()
+                   pikalog.info(logstr_.format("MULTICLIENT1"))
+                   bot2.me = await bot2.get_me() 
+                   bot2.uid = telethon.utils.get_peer_id(bot2.me)
+                   msg+ = _logstr_.format("MULTICLIENT1") + "\n\n"
+                   await pika_msg(_logpika, msg)
+                except:
+                   pikalog.info(_logstr2_.format("MULTICLIENT1")
+                   msg+ = _logstr2_.format("MULTICLIENT1") + "\n\n"
+                   await pika_msg(_logpika, msg) 
+                   await pika_login("STR2")
+            if bot3:
+                try:
+                   await bot3.start()
+                   pikalog.info(logstr_.format("MULTICLIENT2")
+                   bot3.me = await bot.get_me() 
+                   bot3.uid = telethon.utils.get_peer_id(bot3.me)
+                   msg += logstr_.format("MULTICLIENT2") + "\n\n"
+                   await pika_msg(_logpika, msg)
+                except:
+                   pikalog.info(_logstr2_.format("MULTICLIENT2")
+                   msg+ = _logstr2_.format("MULTICLIENT2") + "\n\n"
+                   await pika_msg(_logpika, msg) 
+                   await pika_login("STR3")
+            if bot4:
+                try:
+                   await bot4.start()
+                   pikalog.info(logstr_.format("MULTICLIENT3"))
+                   bot4.me = await bot4.get_me() 
+                   bot4.uid = telethon.utils.get_peer_id(bot4.me)
+                   msg += logstr_.format("MULTICLIENT3") + "\n\n"
+                   await pika_msg(_logpika, msg) 
+                except:
+                   pikalog.info(_logstr2_.format("MULTICLIENT3")
+                   msg+ = _logstr2_.format("MULTICLIENT3") + "\n\n"
+                   await pika_msg(_logpika, msg) 
+                   await pika_login("STR4")
 
-        if Var.STR2 and bot2 is None:
-           try:
-              await bot2.start()
-           except:
-              pikalog.info("**MULTICLIENT1**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-              await pika_login("STR2")
+            if Var.STR1 and bot is None:
+                try:
+                  await bot.start()
+                except:
+                  pikalog.info("**MAINCLIENT**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
+                  await pika_login("STRING_SESSION")
 
-        if Var.STR3 and bot3 is None:
-           try:
-              await bot3.start()
-           except:
-              pikalog.info("**MULTICLIENT2**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-              await pika_login("STR3")
+            if Var.STR2 and bot2 is None:
+                try:
+                  await bot2.start()
+               except:
+                  pikalog.info("**MULTICLIENT1**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
+                  await pika_login("STR2")
 
-        if Var.STR4 and bot4 is None:
-           try:
-              await bot4.start()
-           except:
-              pikalog.info("**MULTICLIENT3**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-              await pika_login("STR4")
+            if Var.STR3 and bot3 is None:
+                try:
+                  await bot3.start()
+                except:
+                  pikalog.info("**MULTICLIENT2**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
+                  await pika_login("STR3")
+
+            if Var.STR4 and bot4 is None:
+                try:
+                  await bot4.start()
+                except:
+                  pikalog.info("**MULTICLIENT3**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
+                  await pika_login("STR4")
 
         cli1 = await client.get_messages(Client, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
         for ixo in total_doxx:
@@ -104,6 +125,9 @@ else:
                 path1 = Path(f.name);shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
 
+        msg += "Sucessfully Loaded Plugins\n\n" 
+        await pika_msg(_logpika, msg)
+        
         for name in _files:
             with open(name) as f:
                 _asstpath = Path(f.name);shortname = _asstpath.stem
@@ -114,6 +138,8 @@ else:
         from pikabot._core import _verify
         await _verify() 
 
+        msg += "**Pikabot Started Sucessfully**"
+        await pika_msg(_logpika, msg)
     client.loop.run_until_complete(connecting_clients())
 
     if len(argv) not in (1, 3, 4):
