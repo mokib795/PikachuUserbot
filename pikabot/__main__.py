@@ -21,8 +21,7 @@ else:
     _const= {} 
     l= Var.CUSTOM_CMD
     from pikabot import tgbot
-    from pikabot.events import pika_msg
-    from pikabot.login import pika_login
+    from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
     async def connecting_clients():
