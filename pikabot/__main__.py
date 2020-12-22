@@ -20,7 +20,8 @@ if bot is None:
 else:
     _const= {} 
     l= Var.CUSTOM_CMD
-    from pikabot import tgbot 
+    from pikabot import tgbot
+    from pikabot.utils import pika_msg
     from pikabot.login import pika_login
     _logstr_ = "_{}_: Connected 🔥"
     _logstr2_ = "_{}_: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
