@@ -28,6 +28,7 @@ else:
                  await bot.start()
                  pikalog.info("_MAINCLIENT_: Connected 🔥")
                  bot.me = await bot.get_me() 
+                 bot.pika_cmd = {} 
                  bot.uid = telethon.utils.get_peer_id(bot.me)
             except:
                  pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
