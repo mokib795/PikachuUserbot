@@ -39,11 +39,11 @@ else:
                    bot.me = await bot.get_me() 
                    bot.pika_cmd = {} 
                    bot.uid = telethon.utils.get_peer_id(bot.me)
-                   pikalog.info(_logstr_.format("MAINCLIENT")
+                   pikalog.info(_logstr_.format("MAINCLIENT"))
                    msg += _logstr_.format("MAINCLIENT") + "\n\n"
                    await pika_msg(_logpika, msg)
                 except:
-                   pikalog.info(_logstr2_.format("MAINCLIENT")
+                   pikalog.info(_logstr2_.format("MAINCLIENT"))
                    msg += _logstr2_.format("MAINCLIENT") + "\n\n"
                    await pika_msg(_logpika, msg) 
                    await pika_login("STRING_SESSION")
@@ -56,20 +56,20 @@ else:
                    msg += _logstr_.format("MULTICLIENT1") + "\n\n"
                    await pika_msg(_logpika, msg)
                 except:
-                   pikalog.info(_logstr2_.format("MULTICLIENT1")
+                   pikalog.info(_logstr2_.format("MULTICLIENT1"))
                    msg += _logstr2_.format("MULTICLIENT1") + "\n\n"
                    await pika_msg(_logpika, msg) 
                    await pika_login("STR2")
             if bot3:
                 try:
                    await bot3.start()
-                   pikalog.info(logstr_.format("MULTICLIENT2")
+                   pikalog.info(logstr_.format("MULTICLIENT2"))
                    bot3.me = await bot.get_me() 
                    bot3.uid = telethon.utils.get_peer_id(bot3.me)
                    msg += logstr_.format("MULTICLIENT2") + "\n\n"
                    await pika_msg(_logpika, msg)
                 except:
-                   pikalog.info(_logstr2_.format("MULTICLIENT2")
+                   pikalog.info(_logstr2_.format("MULTICLIENT2"))
                    msg += _logstr2_.format("MULTICLIENT2") + "\n\n"
                    await pika_msg(_logpika, msg) 
                    await pika_login("STR3")
@@ -82,7 +82,7 @@ else:
                    msg += logstr_.format("MULTICLIENT3") + "\n\n"
                    await pika_msg(_logpika, msg) 
                 except:
-                   pikalog.info(_logstr2_.format("MULTICLIENT3")
+                   pikalog.info(_logstr2_.format("MULTICLIENT3"))
                    msg += _logstr2_.format("MULTICLIENT3") + "\n\n"
                    await pika_msg(_logpika, msg) 
                    await pika_login("STR4")
