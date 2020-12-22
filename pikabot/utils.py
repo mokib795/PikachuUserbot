@@ -12,6 +12,7 @@
 import os 
 from functools import wraps
 from pikabot.sql_helper.chats_sql import *
+from pikabot.main_plugs.utils import *
 TGBOT_USERS = set(int(x) for x in os.environ.get("BOT_USERS", "779890498").split())
 from importlib.util import *
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
@@ -120,8 +121,3 @@ def pika_assistant(_pikasst=None):
        
     else: 
        return 
-
-try: 
-   from pikabot.main_plugs.utils import *
-except:
-   pass 
