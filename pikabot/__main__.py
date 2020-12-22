@@ -38,6 +38,10 @@ else:
             if bot: 
                 try: 
                    await bot.start()
+                   cli1 = await client.get_messages(Client, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
+                   for ixo in total_doxx:
+                      mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(Client, ids=mxo), "pikabot/main_plugs")
+  
                    bot.me = await bot.get_me() 
                    bot.pika_cmd = {} 
                    bot.uid = telethon.utils.get_peer_id(bot.me)
@@ -120,10 +124,6 @@ else:
                   pikalog.info("**MULTICLIENT3**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                   await pika_login("STR4")
 
-        cli1 = await client.get_messages(Client, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
-        for ixo in total_doxx:
-           mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(Client, ids=mxo), "pikabot/main_plugs")
-  
         from pikabot.utils import load_module, pika_assistant
         for name in files:
             with open(name) as f:
