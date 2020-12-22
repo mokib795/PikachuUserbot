@@ -86,9 +86,11 @@ async def get_pika_tg(_pika_):
       return True
   else:
       return None
-
-from pikabot.main_plugs.utils import *
-from pikabot.sql_helper.chats_sql import *
+try: 
+   from pikabot.main_plugs.utils import *
+   from pikabot.sql_helper.chats_sql import *
+except: 
+    pass
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def add_chat(_pika_):
