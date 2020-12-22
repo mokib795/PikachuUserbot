@@ -23,14 +23,14 @@ else:
     from pikabot import tgbot
     from pikabot.utils import pika_msg
     from pikabot.login import pika_login
-    _logstr_ = "_{}_: Connected 🔥"
-    _logstr2_ = "_{}_: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
+    _logstr_ = "__{}__: Connected 🔥"
+    _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if tgbot: 
             await tgbot.start()
             tgbot.me = await tgbot.get_me()
-            pikalog.info(_logstr_.format(_TGBOT_))
+            pikalog.info(_logstr_.format("TGBOT"))
             msg = _logstr_.format("_TGBOT_")
             _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
             await asyncio.sleep(2)
