@@ -33,6 +33,7 @@ else:
             pikalog.info(_logstr_)
             msg = _logstr_.format("_TGBOT_")
             _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
+            await asyncio.sleep(2)
             tgbot.uid = telethon.utils.get_peer_id(tgbot.me)
             if bot: 
                 try: 
@@ -55,10 +56,12 @@ else:
                    bot2.me = await bot2.get_me() 
                    bot2.uid = telethon.utils.get_peer_id(bot2.me)
                    msg += _logstr_.format("MULTICLIENT1") + "\n\n"
+                   await asyncio.sleep(2)
                    await pika_msg(_logpika, msg)
                 except:
                    pikalog.info(_logstr2_.format("MULTICLIENT1"))
                    msg += _logstr2_.format("MULTICLIENT1") + "\n\n"
+                   await asyncio.sleep(2)
                    await pika_msg(_logpika, msg) 
                    await pika_login("STR2")
             if bot3:
