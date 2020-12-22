@@ -97,7 +97,7 @@ else:
             if Var.STR2 and bot2 is None:
                 try:
                   await bot2.start()
-               except:
+                except:
                   pikalog.info("**MULTICLIENT1**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                   await pika_login("STR2")
 
