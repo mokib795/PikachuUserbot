@@ -29,8 +29,6 @@ from pathlib import Path
 from telethon.tl.types import InputMessagesFilterDocument , PeerChannel 
 import traceback
 import pikabot.sql_helper 
-import pikabot.main_plugs.SysRuntime 
-import pikabot.main_plugs.plug
 from traceback import format_exc
 from time import gmtime, strftime
 from asyncio import create_subprocess_shell as asyncsubshell, subprocess as asyncsub
