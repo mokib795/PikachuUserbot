@@ -30,7 +30,7 @@ else:
         if tgbot: 
             await tgbot.start()
             tgbot.me = await tgbot.get_me()
-            pikalog.info(_logstr_)
+            pikalog.info(_logstr_.format(_TGBOT_)
             msg = _logstr_.format("_TGBOT_")
             _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
             await asyncio.sleep(2)
@@ -44,7 +44,8 @@ else:
                    pikalog.info(_logstr_.format("MAINCLIENT"))
                    msg += _logstr_.format("MAINCLIENT") + "\n\n"
                    await pika_msg(_logpika, msg)
-                except:
+                except Exception as e:
+                   pikalog.info(str(e))
                    pikalog.info(_logstr2_.format("MAINCLIENT"))
                    msg += _logstr2_.format("MAINCLIENT") + "\n\n"
                    await pika_msg(_logpika, msg) 
