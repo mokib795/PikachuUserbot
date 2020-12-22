@@ -121,5 +121,7 @@ def pika_assistant(_pikasst=None):
     else: 
        return 
 
-
-from pikabot.main_plugs.utils import *
+try: 
+   from pikabot.main_plugs.utils import *
+except:
+   pass 
