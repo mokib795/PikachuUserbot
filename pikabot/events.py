@@ -10,9 +10,4 @@
 # All rights reserved 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 
-async def pika_msg(_pika, text, _pika_=None, parse_mode=None, link_preview=None):
-  parse_mode = parse_mode or "md"; link_preview = link_preview or False
-  if _pika_ is None:
-      return await _pika.edit(text, parse_mode=parse_mode, link_preview=link_preview)
-  else:
-      return await _pika.reply(text, parse_mode=parse_mode,link_preview=link_preview)
+from pikabot.utils import *
