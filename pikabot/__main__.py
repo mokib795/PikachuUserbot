@@ -30,7 +30,7 @@ else:
         if tgbot: 
             await tgbot.start()
             tgbot.me = await tgbot.get_me()
-            pikalog.info(_logstr_.format(_TGBOT_)
+            pikalog.info(_logstr_.format(_TGBOT_))
             msg = _logstr_.format("_TGBOT_")
             _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
             await asyncio.sleep(2)
