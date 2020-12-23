@@ -12,9 +12,6 @@
 import os, telethon, telethon.utils, asyncio, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a
 from logging import getLogger; pikalog = getLogger(__name__)
 
-if BF_BOT:    
-    tgbot = TelegramClient("Tgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
-
 if bot is None: 
     from pikabot.login import *
     pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
