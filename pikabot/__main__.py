@@ -147,9 +147,9 @@ else:
     client.loop.run_until_complete(connecting_clients())
 
     if len(argv) not in (1, 3, 4):
-        ItzSjdude.disconnect()
+        tgbot.disconnect()
     else:
-        ItzSjDude.run_until_disconnected()
+        tgbot.run_until_disconnected()
 
     
 
