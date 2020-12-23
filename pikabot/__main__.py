@@ -30,7 +30,7 @@ else:
             await tgbot.start()
             tgbot.me = await tgbot.get_me()
             pikalog.info(_logstr_.format("TGBOT"))
-            msg = _logstr_.format("_TGBOT_")
+            msg = _logstr_.format("_TGBOT_") + '\n\n'
             _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
             await asyncio.sleep(2)
             tgbot.uid = telethon.utils.get_peer_id(tgbot.me)
