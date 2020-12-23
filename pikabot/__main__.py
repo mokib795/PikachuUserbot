@@ -24,9 +24,7 @@ else:
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
-    async with tgbot:
-         await tgbot.start() 
-  
+ 
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if tgbot: 
@@ -148,10 +146,10 @@ else:
             await pika_msg(_logpika, msg)
 
         
-    if len(argv) not in (1, 3, 4):
-        tgbot.disconnect()
-    else:
-        tgbot.run_until_disconnected()
+        if len(argv) not in (1, 3, 4):
+            tgbot.disconnect()
+        else:
+            tgbot.run_until_disconnected()
     
     
 
