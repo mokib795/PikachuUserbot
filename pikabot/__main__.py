@@ -18,6 +18,7 @@ if bot is None:
     _Pika_Loop_ = asyncio.get_event_loop()
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
+    _Pika_Loop_ = asyncio.get_event_loop()
     _const= {}; _start = True; l= Var.CUSTOM_CMD
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
@@ -147,3 +148,4 @@ else:
         else:
             await bot.run_until_disconnected()
     
+    _Pika_Loop_.run_until_complete(connecting_clients())
