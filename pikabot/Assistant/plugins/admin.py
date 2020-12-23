@@ -8,8 +8,7 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
-
-"""
+__pika__= """
 {i}setgpic <reply to image>
 **Usage**: Set replied Image as Group Profile pic\n
 {i}promote reply to UserMsg or @username <CustomAdmintag>
@@ -37,8 +36,7 @@
 {i}kick reply to UserMsg or @username
 **Usage**: kick User from group\n
 {i}pin <reply to msg>
-**Usage**: Pins replied msg\n
-"""
+**Usage**: Pins replied msg\n"""
 
 from Asst_modules import (
     _ban,
