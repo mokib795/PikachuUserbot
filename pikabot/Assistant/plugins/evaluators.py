@@ -8,12 +8,11 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
-"""
+__pika__="""
 {i}bash <cmd> 
 *"Usage**: For executing linux/Gnu Commands\n 
 {i}eval <code> 
-*"Usage**: For executing short python codes\n
-"""
+*"Usage**: For executing short python codes\n"""
 from Asst_modules import _eval, _bash 
 from pikabot.utils import pikatgbot
 
