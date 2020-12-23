@@ -145,7 +145,8 @@ else:
             msg += "**Pikabot Started Sucessfully**"
             await pika_msg(_logpika, msg)
 
-    if len(argv) in (1, 3, 4):
+
+    if __name__ == '__main__':
         _Pika_Loop_.run_until_complete(connecting_clients())
 
     
