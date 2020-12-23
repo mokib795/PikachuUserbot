@@ -1,9 +1,8 @@
-"""
+__pika__="""
 {i}get_id <reply to msg/media> 
 **Usage**: Get ID of any Telegram media, Group, or any user\n
 {i}info @username/reply to user msg
-**Usage**: Get full User information
-"""
+**Usage**: Get full User information"""
 
 from Asst_modules import _getinfo, _getid
 
