@@ -85,7 +85,7 @@ else:
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
 else: 
-    bot3 = None 
+    bot4 = None 
 
 if BF_BOT:    
     tgbot = TelegramClient("PikaTgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
