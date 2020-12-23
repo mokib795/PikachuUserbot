@@ -142,9 +142,8 @@ else:
             msg += "**Pikabot Started Sucessfully**"
             await pika_msg(_logpika, msg)
 
-        
         if len(argv) not in (1, 3, 4):
-            bot.disconnect()
+            await bot.disconnect()
         else:
-            bot.run_until_disconnected()
+            await bot.run_until_disconnected()
     
