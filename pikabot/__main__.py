@@ -123,28 +123,29 @@ else:
                   pikalog.info("**MULTICLIENT3**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                   await pika_login("STR4")
 
-        from pikabot.main_plugs.utils import load_module
-        for name in files:
-            with open(name) as f:
-                path1 = Path(f.name);shortname = path1.stem
-                load_module(shortname.replace(".py", ""))
+            from .main_plugs.utils import load_module
+            for name in files:
+                with open(name) as f:
+                    path1 = Path(f.name);shortname = path1.stem
+                    load_module(shortname.replace(".py", ""))
 
-        msg += "Sucessfully Loaded Plugins\n\n" 
-        await pika_msg(_logpika, msg)
+            msg += "Sucessfully Loaded Plugins\n\n" 
+            await pika_msg(_logpika, msg)
 
-        from pikabot.utils pika_assistant
-        for name in _files:
-            with open(name) as f:
-                _asstpath = Path(f.name);shortname = _asstpath.stem
-                pika_assistant(shortname.replace(".py", ""))
+            from .utils pika_assistant
+            for name in _files:
+                with open(name) as f:
+                    _asstpath = Path(f.name);shortname = _asstpath.stem
+                    pika_assistant(shortname.replace(".py", ""))
 
-        import pikabot._core
+            import ._core
 
-        from pikabot._core import _verify
-        await _verify() 
+            from pikabot._core import _verify
+            await _verify() 
 
-        msg += "**Pikabot Started Sucessfully**"
-        await pika_msg(_logpika, msg)
+            msg += "**Pikabot Started Sucessfully**"
+            await pika_msg(_logpika, msg)
+
     client.loop.run_until_complete(connecting_clients())
 
     if len(argv) not in (1, 3, 4):
