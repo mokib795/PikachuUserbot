@@ -144,7 +144,7 @@ else:
             msg += "**Pikabot Started Sucessfully**"
             await pika_msg(_logpika, msg)
 
-    client.loop.run_until_complete(connecting_clients())
+    tgbot.loop.run_until_complete(connecting_clients())
 
     if len(argv) not in (1, 3, 4):
         tgbot.disconnect()
