@@ -34,6 +34,7 @@ pybase64>=0.4.0
 pyfiglet
 pymongo
 python-barcode
+youtube-search-python
 python-dotenv
 python-magic
 pytube
