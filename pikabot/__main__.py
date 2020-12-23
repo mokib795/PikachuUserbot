@@ -29,7 +29,7 @@ else:
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if BF_BOT: 
-            await tgbot.start()
+            tgbot.start()
             tgbot.me = await tgbot.get_me()
             pikalog.info(_logstr_.format("TGBOT"))
             msg = _logstr_.format("_TGBOT_") + '\n\n'
