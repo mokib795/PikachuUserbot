@@ -18,14 +18,13 @@ if bot is None:
     _Pika_Loop_ = asyncio.get_event_loop()
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
-    _const= {} 
-    l= Var.CUSTOM_CMD
+    _const= {}; _start = True; l= Var.CUSTOM_CMD
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
-        if BF_BOT: 
+        if _start: 
             await tgbot.start()
             tgbot.me = await tgbot.get_me()
             pikalog.info(_logstr_.format("TGBOT"))
