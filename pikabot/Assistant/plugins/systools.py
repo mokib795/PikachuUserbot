@@ -1,4 +1,4 @@
-"""**HEROKU MANAGER**\n\n
+__pika__="""**HEROKU MANAGER**\n\n
 {i}set|get|del var <VarName>
 **Usage**: set|get|del Heroku Vars\n
 {i}usage
