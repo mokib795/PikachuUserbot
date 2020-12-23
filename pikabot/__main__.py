@@ -130,7 +130,7 @@ else:
                         path1 = Path(f.name);shortname = path1.stem
                         load_module(shortname.replace(".py", ""))
 
-                from pikabot.utils pika_assistant
+                from pikabot.utils import pika_assistant
                 for name in _files:
                     with open(name) as f:
                         _asstpath = Path(f.name);shortname = _asstpath.stem
