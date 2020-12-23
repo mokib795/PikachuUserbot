@@ -148,9 +148,9 @@ else:
 
         
         if len(argv) not in (1, 3, 4):
-            tgbot.disconnect()
+            bot.disconnect()
         else:
-            tgbot.run_until_disconnected()
+            bot.run_until_disconnected()
     
     _Pika_Loop_.run_until_complete(connecting_clients())
     
