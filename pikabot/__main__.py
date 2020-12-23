@@ -130,9 +130,6 @@ else:
                         path1 = Path(f.name);shortname = path1.stem
                         load_module(shortname.replace(".py", ""))
 
-                msg += "Sucessfully Loaded Plugins\n\n" 
-                await pika_msg(_logpika, msg)
-
                 from pikabot.utils pika_assistant
                 for name in _files:
                     with open(name) as f:
@@ -140,11 +137,11 @@ else:
                         pika_assistant(shortname.replace(".py", ""))
 
             load_plugs()
+            msg += "Sucessfully Loaded Plugins\n\n" 
+            await pika_msg(_logpika, msg)
             import ._core
-
-            from pikabot._core import _verify
+            from ._core import _verify
             await _verify() 
-
             msg += "**Pikabot Started Sucessfully**"
             await pika_msg(_logpika, msg)
 
