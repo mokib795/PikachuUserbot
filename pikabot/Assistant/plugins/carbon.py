@@ -1,4 +1,4 @@
-__pika__"""
+__pika__="""
 {i}carbon <reply to message>"""
 
 from Asst_modules import _carbon
