@@ -67,19 +67,27 @@ if bool(ENV):
 else:    
     pass
 
-bot= bot2 = bot3 = bot4 = tgbot =  None
 BF_BOT=Var.TG_BOT_TOKEN_BF_HER
 BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
-try:
-   if Var.STR1:    
-       bot = TelegramClient(StringSession(Var.STR1),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-   if Var.STR2:
-       bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-   if Var.STR3:
-       bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-   if Var.STR4:
-       bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-   if BF_BOT:    
-       tgbot = TelegramClient("Tgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
-except:
-    pass
+if Var.STR1:    
+    bot = TelegramClient(StringSession(Var.STR1),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+else: 
+    bot = None 
+
+if Var.STR2:
+    bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+else:
+    bot2 = None 
+if Var.STR3:
+    bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+else:
+    bot3 = None 
+if Var.STR4:
+    bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+else: 
+    bot3 = None 
+
+if BF_BOT:    
+    tgbot = TelegramClient("PikaTgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
+else: 
+    tgbot = None 
