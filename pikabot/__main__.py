@@ -20,11 +20,12 @@ if bot is None:
 else:
     _const= {} 
     l= Var.CUSTOM_CMD
+    import asyncio 
     from pikabot import tgbot
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
- 
+    _Pika_Loop_ = asyncio.get_event_loop()
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if tgbot: 
@@ -151,5 +152,5 @@ else:
         else:
             tgbot.run_until_disconnected()
     
+    _Pika_Loop_.run_until_complete(connecting_clients())
     
-
