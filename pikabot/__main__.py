@@ -22,6 +22,7 @@ else:
     l= Var.CUSTOM_CMD
     from pikabot import tgbot
     from pikabot.login import pika_login, pika_msg
+    _Pika_Loop_ = asyncio.get_event_loop()
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
     async def connecting_clients():
@@ -144,12 +145,10 @@ else:
             msg += "**Pikabot Started Sucessfully**"
             await pika_msg(_logpika, msg)
 
-    tgbot.loop.run_until_complete(connecting_clients())
+    tgbot.run_until_complete(connecting_clients())
 
-    if len(argv) not in (1, 3, 4):
-        tgbot.disconnect()
-    else:
-        tgbot.run_until_disconnected()
+    if len(argv) in (1, 3, 4):
+        _Pika_Loop_.run_until_complete(connecting_clients())()
 
     
 
