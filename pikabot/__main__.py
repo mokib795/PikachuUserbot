@@ -12,6 +12,9 @@
 import os, telethon, telethon.utils, asyncio, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a
 from logging import getLogger; pikalog = getLogger(__name__)
 
+if BF_BOT:    
+    tgbot = TelegramClient("Tgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
+
 if bot is None: 
     from pikabot.login import *
     pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
@@ -21,7 +24,6 @@ else:
     _const= {} 
     l= Var.CUSTOM_CMD
     import asyncio 
-    from pikabot import tgbot, BF_BOT
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
     _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
@@ -29,7 +31,7 @@ else:
     async def connecting_clients():
         import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if BF_BOT: 
-            tgbot.start()
+            await tgbot.start()
             tgbot.me = await tgbot.get_me()
             pikalog.info(_logstr_.format("TGBOT"))
             msg = _logstr_.format("_TGBOT_") + '\n\n'
