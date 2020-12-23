@@ -139,7 +139,6 @@ else:
             load_plugs()
             msg += "Sucessfully Loaded Plugins\n\n" 
             await pika_msg(_logpika, msg)
-            import ._core
             from ._core import _verify
             await _verify() 
             msg += "**Pikabot Started Sucessfully**"
