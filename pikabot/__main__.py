@@ -55,7 +55,7 @@ else:
             if bot2:
                 try:
                    await bot2.start()
-                   pikalog.info(logstr_.format("MULTICLIENT1"))
+                   pikalog.info(_logstr_.format("MULTICLIENT1"))
                    bot2.me = await bot2.get_me() 
                    bot2.uid = telethon.utils.get_peer_id(bot2.me)
                    msg += _logstr_.format("MULTICLIENT1") + "\n\n"
@@ -70,10 +70,10 @@ else:
             if bot3:
                 try:
                    await bot3.start()
-                   pikalog.info(logstr_.format("MULTICLIENT2"))
-                   bot3.me = await bot.get_me() 
+                   pikalog.info(_logstr2_.format("MULTICLIENT2"))
+                   bot3.me = await bot3.get_me() 
                    bot3.uid = telethon.utils.get_peer_id(bot3.me)
-                   msg += logstr_.format("MULTICLIENT2") + "\n\n"
+                   msg += _logstr_.format("MULTICLIENT2") + "\n\n"
                    await pika_msg(_logpika, msg)
                 except:
                    pikalog.info(_logstr2_.format("MULTICLIENT2"))
@@ -83,7 +83,7 @@ else:
             if bot4:
                 try:
                    await bot4.start()
-                   pikalog.info(logstr_.format("MULTICLIENT3"))
+                   pikalog.info(_logstr_.format("MULTICLIENT3"))
                    bot4.me = await bot4.get_me() 
                    bot4.uid = telethon.utils.get_peer_id(bot4.me)
                    msg += logstr_.format("MULTICLIENT3") + "\n\n"
