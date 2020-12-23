@@ -33,7 +33,7 @@ def pikatgbot(pika=None, silent=None):
 
             if "AmIAdm" in pika:
 
-                _pika = await tgbot.get_permissions(event.chat_id, _selfpika.id)
+                _pika = await tgbot.get_permissions(int(event.chat_id), _selfpika.id)
                 if _pika.is_admin:
                     await func(event)
                 else:
