@@ -146,9 +146,9 @@ else:
 
         
     if len(argv) not in (1, 3, 4):
-        client.disconnect()
+        tgbot.disconnect()
     else:
-        client.run_until_disconnected()
+        tgbot.run_until_disconnected()
     
     
 
