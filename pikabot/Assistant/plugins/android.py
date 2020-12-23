@@ -1,4 +1,4 @@
-"""Android Related Commands
+__pika__="""Android Related Commands
 {i}magisk
 **Usage**:Get latest Magisk releases\n
 {i}device <codename>
@@ -8,8 +8,7 @@
 {i}specs <brand> <device>
 **Usage**: Get device specifications info.\n
 {i}twrp <codename>
-**Usage**: Get latest twrp download for android device.\n
-"""
+**Usage**: Get latest twrp download for android device.\n"""
 
 from Asst_modules import magisk, device_info, codename_info, dspecs, twrp
 
