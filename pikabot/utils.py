@@ -81,6 +81,7 @@ async def is_pikatg(_pika_=None):
 async def get_pika_id(_pika):
   _pika_= await _pika.client.get_me() 
   return _pika_.id 
+
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def get_pika_tg(_pika_): 
   _tg = await _pika_.client.get_me()
@@ -98,7 +99,15 @@ async def add_chat(_pika_):
            return "Added" 
   else:
     return
- 
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
+async def pika_cmds(_pika_):
+  global PikaAsst
+  if not await is_pikatg(_pika_):
+      return bot.pika_cmd
+  else: 
+      return PikaAsst
+
+
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 def pika_assistant(_pikasst=None):
     if ACTIVATE_ASSISTANT:
@@ -121,3 +130,4 @@ def pika_assistant(_pikasst=None):
        
     else: 
        return 
+
