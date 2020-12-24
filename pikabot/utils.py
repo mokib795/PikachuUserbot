@@ -118,7 +118,6 @@ def pika_assistant(_pikasst=None):
        from __main__ import l as rx
        from pathlib import Path as _asstpath
        import plugins.__init__ as _Modules
-       logpa.info('✨STARTING PIKA ASSISTANT✨')
                                     #____Paths/Spec_____
        asstpath = _asstpath(f"./pikabot/Assistant/plugins/{_pikasst}.py")
        asstname = "pikabot.Assistant.plugins.{}".format(_pikasst)
