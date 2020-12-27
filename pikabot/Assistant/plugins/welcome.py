@@ -1,4 +1,4 @@
-__pika__="""
+"""
 {i}setwelcome <welcome message> or reply to msg
 **Usage**: Sets the message as a welcome note in the chat
 {i}getwelcome 
