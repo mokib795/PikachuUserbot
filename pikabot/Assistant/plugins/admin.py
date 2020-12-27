@@ -39,6 +39,8 @@ __pika__= """
 **Usage**: Pins replied msg\n"""
 
 from Asst_modules import (
+    ItzSjDude,
+    pikatgbot,
     _ban,
     _demote,
     _gadmin,
