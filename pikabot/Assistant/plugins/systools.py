@@ -1,4 +1,4 @@
-__pika__="""**HEROKU MANAGER**\n\n
+"""
 {i}set|get|del var <VarName>
 **Usage**: set|get|del Heroku Vars\n
 {i}usage
@@ -6,7 +6,8 @@ __pika__="""**HEROKU MANAGER**\n\n
 {i}logs
 **Usage**: Sends your botlogs in current chat\n
 {i}restart
-**Usage**: Restarts Pikabot"""
+**Usage**: Restarts Pikabot
+"""
 
 from Asst_modules import ItzSjDude, pikatgbot, _dyno, _logs, _restart, _vars
 
