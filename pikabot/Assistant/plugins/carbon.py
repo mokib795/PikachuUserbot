@@ -1,7 +1,7 @@
 __pika__="""
 {i}carbon <reply to message>"""
 
-from Asst_modules import _carbon
+from Asst_modules import ItzSjDude, pikatgbot, _carbon
 
 
 @ItzSjDude(pika=True, pattern="carbon (?: |$)(.*)")
