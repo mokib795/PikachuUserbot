@@ -10,7 +10,7 @@ __pika__="""Android Related Commands
 {i}twrp <codename>
 **Usage**: Get latest twrp download for android device.\n"""
 
-from Asst_modules import magisk, device_info, codename_info, dspecs, twrp
+from Asst_modules import ItzSjDude, pikatgbot, magisk, device_info, codename_info, dspecs, twrp
 
 @ItzSjDude(pika=True, pattern="magisk$")
 @pikatgbot("AmIAdm")
