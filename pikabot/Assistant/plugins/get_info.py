@@ -4,7 +4,7 @@ __pika__="""
 {i}info @username/reply to user msg
 **Usage**: Get full User information"""
 
-from Asst_modules import _getinfo, _getid
+from Asst_modules import ItzSjDude, pikatgbot, _getinfo, _getid
 
 @ItzSjDude(pika=True, pattern="info(.*)")
 @pikatgbot('AmIAdm')
