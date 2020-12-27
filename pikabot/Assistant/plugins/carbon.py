@@ -1,4 +1,4 @@
-__pika__="""
+"""
 {i}carbon <reply to message>"""
 
 from Asst_modules import ItzSjDude, pikatgbot, _carbon
