@@ -8,7 +8,7 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
-__pika__="""
+"""
 {i}bash <cmd> 
 *"Usage**: For executing linux/Gnu Commands\n 
 {i}eval <code> 
