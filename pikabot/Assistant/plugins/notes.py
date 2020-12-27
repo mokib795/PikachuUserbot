@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-from Asst_modules import _add_notes, _allnotes, _remove_notes, admin_cmd, note_incm, tgbot
+from Asst_modules import ItzSjDude, pikatgbot, _add_notes, _allnotes, _remove_notes, admin_cmd, note_incm, tgbot
 
 
 @ItzSjDude(pika=True, groups_only=True, pattern="^/notes$")
