@@ -8,7 +8,7 @@ __pika__="""**HEROKU MANAGER**\n\n
 {i}restart
 **Usage**: Restarts Pikabot"""
 
-from Asst_modules import _dyno, _logs, _restart, _vars
+from Asst_modules import ItzSjDude, pikatgbot, _dyno, _logs, _restart, _vars
 
 @ItzSjDude(pika=True, pattern=r"(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
 @pikatgbot('OwnSudo')
