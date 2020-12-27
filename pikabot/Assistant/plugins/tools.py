@@ -1,8 +1,8 @@
-__pika__="""Telegraph and Other Utilities
-Available Commands:
+"""
 {i}app <appname>
 {i}tm <as reply to a media>
-{i}tt <as reply to a large text>"""
+{i}tt <as reply to a large text>
+"""
 from Asst_modules import ItzSjDude, pikatgbot, _invite, _telegraph, apk
 
 @ItzSjDude(pika=True, pattern="app (.*)")
