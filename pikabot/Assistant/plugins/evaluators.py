@@ -13,8 +13,7 @@ __pika__="""
 *"Usage**: For executing linux/Gnu Commands\n 
 {i}eval <code> 
 *"Usage**: For executing short python codes\n"""
-from Asst_modules import _eval, _bash 
-from pikabot.utils import pikatgbot
+from Asst_modules import ItzSjDude, pikatgbot, _eval, _bash 
 
 
 @ItzSjDude(pika=True, pattern="bash ?(.*)")
