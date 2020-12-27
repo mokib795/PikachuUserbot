@@ -1,6 +1,7 @@
-__pika__="""
+"""
 {i}pika
-**Usage**: Checks Ping Speed"""
+**Usage**: Checks Ping Speed
+"""
 
 # Made by @ItzSjDude for Pikabot
 from Asst_modules import ItzSjDude, pikatgbot, _ping
