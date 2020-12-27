@@ -3,7 +3,7 @@ __pika__="""
 **Usage**: Checks Ping Speed"""
 
 # Made by @ItzSjDude for Pikabot
-from Asst_modules import _ping
+from Asst_modules import ItzSjDude, pikatgbot, _ping
 
 
 @ItzSjDude(pika=True, pattern="pika$")
