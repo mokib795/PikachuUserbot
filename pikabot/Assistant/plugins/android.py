@@ -1,4 +1,4 @@
-__pika__="""Android Related Commands
+"""Android Related Commands
 {i}magisk
 **Usage**:Get latest Magisk releases\n
 {i}device <codename>
