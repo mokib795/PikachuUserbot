@@ -10,7 +10,7 @@
 # All rights reserved 
 
 from pikabot.sql_helper.botusers_sql import *
-from Asst_modules import telethon, os, Button, custom, events, GetFullUserRequest, Pika_CallBack
+from Asst_modules import telethon, os, Button, custom, events, GetFullUserRequest, Pika_CallBack, re
 
 pic = os.environ.get("START_PIC", None)
 if pic:
