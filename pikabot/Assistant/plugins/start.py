@@ -44,35 +44,5 @@ async def start(event):
         )
 
 
-@tgbot.on(Pika_CallBack(data=re.compile(rb"pika1\((.+?)\)")))
-async def _(_pika):
-  await _pikacallback1(_pika)
 
-@tgbot.on(Pika_CallBack(data=re.compile(rb"pika2\((.+?)\)")))
-async def _(_pika):
-  await _pikacallback2(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika3")))
-async def _(_pika):
-  await _pikacallback3(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika4")))
-async def _(_pika):
-  await _pikacallback4(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika5(.*)")))
-async def _(_pika):
-  await _pikacallback5(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika6(.*)")))
-async def _(_pika):
-  await _pikacallback6(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika7(.*)")))
-async def _(_pika):
-  await _pikacallback7(_pika)
-
-@tgbot.on(Pika_CallBack(data=re.compile(b"pika8(.*)")))
-async def _(_pika):
-  await _pikacallback8(_pika)
 
