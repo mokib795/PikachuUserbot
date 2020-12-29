@@ -66,7 +66,7 @@ if bool(ENV):
     LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
 else:    
     pass
-
+const = {} 
 BF_BOT=Var.TG_BOT_TOKEN_BF_HER
 BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
 if Var.STR1:    
