@@ -18,14 +18,14 @@ from Asst_modules import *
 async def _(_pika):
   pikacmds = tgbot.PikaAsst
   c_p_n = int(pika_.data_match.group(1).decode("UTF-8"))
-  buttons = paginate_help(c_p_n + 1, pikacmds, "helpme")
+  buttons = assistent_help(c_p_n + 1, pikacmds, "helpme")
   await pika_.edit(buttons=buttons)
 
 @tgbot.on(Pika_CallBack(data=re.compile(rb"pika2\((.+?)\)")))
 async def _(pika_):
     pikacmds = tgbot.PikaAsst
     c_p_n = int(pika_.data_match.group(1).decode("UTF-8"))
-    buttons = paginate_help(c_p_n - 1, pikacmds, "helpme")  # pylint:disable=E0602
+    buttons = assistent_help(c_p_n - 1, pikacmds, "helpme")  # pylint:disable=E0602
     await pika_.edit(buttons=buttons)
 
 @tgbot.on(Pika_CallBack(data=re.compile(b"pika3")))
@@ -56,7 +56,6 @@ async def _(pika_):
     _pika = f"""Pïkå¢hµ Úsêrßð† {helpstr}"""
     _pikacmds = tgbot.PikaAsst
     _pika += "\n**Currently Loaded Plugins**: {}".format(len(_pikacmds))
-    _pika_ = paginate_help(0, _pikacmds, "helpme")
+    _pika_ = assistent_help(0, _pikacmds, "helpme")
     await pika_.edit(_pika, buttons=_pika_, link_preview=False)
-
 
