@@ -22,7 +22,7 @@ def pikatgbot(pika=None, silent=None):
         async def wrapper(event):
             _selfpika = await tgbot.get_me()
             if "AdmOnly" in pika:
-                _pika = await tgbot.get_permissions(event.chat_id, event.sender_id)
+                _pika = await tgbot.get_permissions(int(event.chat_id), event.sender_id)
                 if _pika.is_admin:
                     await func(event)
                 if event.sender_id == bot.uid:
