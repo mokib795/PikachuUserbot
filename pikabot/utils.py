@@ -109,16 +109,15 @@ async def pika_cmds(_pika_):
 
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
+
+import sys           
+import pikabot.utils
+from sys import modules
+from __main__ import l as rx
+from pathlib import Path as _asstpath
+import plugins.__init__ as _Modules
 def pika_assistant(_pikasst=None):
     if ACTIVATE_ASSISTANT:
-                                    #____Imports____
-       import sys           
-       import pikabot.utils
-       from sys import modules
-       from __main__ import l as rx
-       from pathlib import Path as _asstpath
-       import plugins.__init__ as _Modules
-                                    #____Paths/Spec_____
        asstpath = _asstpath(f"./pikabot/Assistant/plugins/{_pikasst}.py")
        asstname = "pikabot.Assistant.plugins.{}".format(_pikasst)
        spec = spec_from_file_location(asstname, asstpath)
