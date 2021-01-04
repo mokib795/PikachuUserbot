@@ -123,11 +123,11 @@ else:
                   await pika_login("STR4")
 
             def load_plugs(): 
-                from pikabot.main_plugs.utils import load_module
+                from pikabot.main_plugs.utils import pika_plugins
                 for name in files:
                     with open(name) as f:
                         path1 = Path(f.name);shortname = path1.stem
-                        load_module(shortname.replace(".py", ""))
+                        pika_plugins(shortname.replace(".py", ""))
 
                 from pikabot.utils import pika_assistant
                 for name in _files:
