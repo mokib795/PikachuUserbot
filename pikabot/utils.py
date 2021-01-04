@@ -122,10 +122,19 @@ def pika_assistant(_pikasst=None):
        asstname = "pikabot.Assistant.plugins.{}".format(_pikasst)
        spec = spec_from_file_location(asstname, asstpath)
        asst = module_from_spec(spec)
-                                   #____Pika_Assistant_Plugins_Loader____
+                                   #____Pikabot__Assistant__Plugins__Loader____
        userbot = pikabot; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude; asst.pikatgbot = pikatgbot; modules['Asst_modules'] = _Modules       
        PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; tgbot.PikaAsst[_pikasst] = asst; spec.loader.exec_module(asst); logpa.info("🔥Imported "+_pikasst)
        
     else: 
        return 
+
+def pika_plugins(_pikamod=None):
+    path = Path(f"plugins/{_pikamod}.py")
+    name = "plugins.{}".format(_pikamod)
+    spec = spec_from_file_location(name, path)
+    _pika = module_from_spec(spec)
+                                   #____Pikabot__Plugins__Loader____
+    userbot = pikabot; _pika.bot = bot; _pika.Var = Var; _pika.rx = rx; _pika.command = Pikapi; _pika.ItzSjDude = ItzSjDude; _pika.pikaa = pikaa; _pika.pika_start = pikarestart; _pika.Config = Var; _pika.borg = bot; _pika.logger = logging.getLogger(_pikamod)
+    modules["SysRuntime"] = pikabot.main_plugs.SysRuntime; modules["userbot"] = pikabot; modules["userbot.utils"] = pikabot.utils; modules["uniborg.util"] = pikabot.utils; spec.loader.exec_module(_pika); bot.pika_cmd[_pikamod] = _pika; modules["pikabot"+_pikamod] = _pika; logpl.info("🔥Imported "+_pikamod)
 
