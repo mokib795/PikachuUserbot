@@ -89,7 +89,10 @@ async def get_pika_tg(_pika_):
   if _tg.id == tgbot.uid:
       return True
   else:
-      return None
+      if _pika_.sender_id in list(Var.SUDO_USERS1) or _pika_.sender_id in list(Var.SUDO_USERS2) or _pika_.sender_id in list(Var.SUDO_USERS3) or _pika_.sender_id in list(Var.SUDO_USERS4): 
+        return True
+      else: 
+        return 
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def add_chat(_pika_):
