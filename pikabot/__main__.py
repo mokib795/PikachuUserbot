@@ -122,7 +122,7 @@ else:
                   pikalog.info("**MULTICLIENT3**: Session Expired, Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                   await pika_login("STR4")
 
-            def load_plugs(): 
+            def __load_plugs__(): 
                 from pikabot.utils import pika_plugins, pika_assistant
                 for name in files:
                     with open(name) as f:
@@ -133,8 +133,8 @@ else:
                     with open(name) as f:
                         _asstpath = Path(f.name);shortname = _asstpath.stem
                         pika_assistant(shortname.replace(".py", ""))
+            __load_plugs__()
 
-            load_plugs()
             msg += "Sucessfully Loaded Plugins\n\n" 
             await pika_msg(_logpika, msg)
             from ._core import _verify
