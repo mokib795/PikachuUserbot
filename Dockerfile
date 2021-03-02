@@ -8,7 +8,7 @@
 #
 # All rights reserved 
 
-FROM python:3.9.2-slim-buster
+FROM ubuntu:latest
 COPY pika.sh /tmp/pika.sh
 WORKDIR root/ItzSjDude
 RUN /tmp/pika.sh && chmod +x /usr/local/bin/* 
