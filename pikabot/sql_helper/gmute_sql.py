@@ -43,7 +43,7 @@ def is_gbanned(sender_id):
 
 
 def gban(sender, pika_id, reason):
-    adder = GBan(str(sender), pika_id, reason)
+    adder = GBan((str(sender), pika_id, reason))
     SESSION.add(adder)
     SESSION.commit()
 
