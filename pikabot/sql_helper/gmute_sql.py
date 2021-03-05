@@ -26,7 +26,7 @@ class GBan(BASE):
     sender = Column(String(14), primary_key=True)
     pika_id = Column(Numeric, primary_key=True)
     reason = Column(UnicodeText)
-    def __init__(self, sender, pika_id):
+    def __init__(self, sender, pika_id, reason):
         self.sender = str(sender)
         self.pika_id = str(pika_id) 
         self.reason = reason 
