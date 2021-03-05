@@ -33,7 +33,7 @@ class GBan(BASE):
 
 GBan.__table__.create(checkfirst=True)
        
-def is_gbanned(sender_id):
+def is_gbanned(sender):
     try:
         return SESSION.query(GBan).all()
     except: 
@@ -54,7 +54,7 @@ def ungban(sender, pika_id):
         SESSION.delete(rem)
         SESSION.commit() 
 
-def is_gmuted(sender_id):
+def is_gmuted(sender):
     try:
         return SESSION.query(GMute).all()
     except: 
