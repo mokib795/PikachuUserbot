@@ -26,7 +26,7 @@ class GBan(BASE):
     sender = Column(String(14), primary_key=True)
     pika_id = Column(Numeric, primary_key=True)
     reason = Column(UnicodeText)
-    def __init__(self, sender, pika_id, reason):
+    def __init__(self, sender, pika_id, reason=""):
         self.sender = str(sender)
         self.pika_id = str(pika_id) 
         self.reason = reason 
@@ -43,7 +43,7 @@ def is_gbanned(sender_id):
 
 
 def gban(sender, pika_id, reason):
-    adder = GBan((str(sender), str(pika_id), reason))
+    adder = GBan(str(sender), str(pika_id), str(reason))
     SESSION.add(adder)
     SESSION.commit()
 
