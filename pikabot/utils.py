@@ -76,9 +76,9 @@ async def is_pikatg(_pika_=None):
   _pika = await _pika_.client.get_me()
   if _pika.id== tgbot.uid:
       return True
-
-  else:
+  if _pika.id==bot.uid:
       return None
+
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def get_pika_id(_pika):
   _pika_= await _pika.client.get_me() 
@@ -92,6 +92,7 @@ async def get_pika_tg(_pika_):
   else:
       if _pika_.sender_id in list(Var.SUDO_USERS1) or _pika_.sender_id in list(Var.SUDO_USERS2) or _pika_.sender_id in list(Var.SUDO_USERS3) or _pika_.sender_id in list(Var.SUDO_USERS4): 
         return True
+
       else: 
         return None    
   
