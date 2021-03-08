@@ -84,15 +84,15 @@ async def get_pika_id(_pika):
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def get_pika_tg(_pika_): 
-  _tg = await get_pika_id(_pika_)
+  tg_id = await get_pika_id(_pika_)
   if Var.SUDO_USERS1 or Var.SUDO_USERS2 or Var.SUDO_USERS3 or Var.SUDO_USERS4: 
       if _pika_.sender_id in Var.SUDO_USERS1 or _pika_.sender_id in Var.SUDO_USERS2 or _pika_.sender_id in Var.SUDO_USERS3 or _pika_.sender_id in Var.SUDO_USERS4:
           return True
 
-  if _tg.id == bot.uid: 
+  if tg_id == bot.uid: 
       return None
     
-  if _tg.id == tgbot.uid: 
+  if tg_id == tgbot.uid: 
       return True 
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
