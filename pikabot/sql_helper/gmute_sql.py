@@ -33,7 +33,7 @@ class GBan(BASE):
 
 GBan.__table__.create(checkfirst=True)
        
-def is_gmuted(sender, pika_id):
+def is_gbanned(sender, pika_id):
     try: 
        _pikaG = SESSION.query(Gban).get((str(sender), str(pika_id)))
           if _pikaG:
