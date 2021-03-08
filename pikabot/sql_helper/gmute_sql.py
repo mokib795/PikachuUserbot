@@ -36,8 +36,8 @@ GBan.__table__.create(checkfirst=True)
 def is_gbanned(sender, pika_id):
     try: 
         _pikaG = SESSION.query(Gban).get((str(sender), str(pika_id)))
-            if _pikaG:
-                return str(_pikaG.reason)
+        if _pikaG:
+            return str(_pikaG.reason)
     except: 
         return None
     finally:
