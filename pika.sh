@@ -26,25 +26,30 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 apt-get update && apt upgrade -y 
 apt-get install -y --no-install-recommends \
     coreutils \
+    gifsicle \
+    apt-utils \
     bash \
-    nodejs \
     bzip2 \
+    imagemagick \
+    build-essential \
+    cmake \
     curl \
+    libmagic-dev \
+    tesseract-ocr \
+    tesseract-ocr-eng \
+    imagemagick \
     figlet \
     gcc \
     g++ \
     git \
-    util-linux \
     libevent-dev \
     libjpeg-dev \
     libffi-dev \
     libpq-dev \
+    libsqlite3-dev \
     libwebp-dev \
-    libxml2 \
-    libxml2-dev \
-    libxslt-dev \
+    libgl1 \
     musl \
-    neofetch \
     libcurl4-openssl-dev \
     postgresql \
     postgresql-client \
@@ -57,24 +62,20 @@ apt-get install -y --no-install-recommends \
     python3-pip \
     libreadline-dev \
     zipalign \
+    sqlite3 \
     ffmpeg \
+    libsqlite3-dev \
+    axel \
     zlib1g-dev \
     recoverjpeg \
     zip \
-    megatools \
     libfreetype6-dev \
     procps \
-    policykit-1\
-    unzip
+    policykit-1
 apt autoremove --yes
 
-pip3 install --upgrade pip setuptools 
-git clone https://github.com/ItzSjDude/PikachuUserbot ./
-mkdir bin && mkdir pikabot/main_plugs
+pip3 install --upgrade pip setuptools && git clone https://github.com/ItzSjDude/PikachuUserbot ./ && mkdir bin && mkdir pikabot/main_plugs && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb && wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip && pip3 install -r requirements.txt
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb && wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
-
-pip3 install -r requirements.txt
 
 echo '
 ┏━┳┳┓╋╋╋┏┓╋╋┏┓         
