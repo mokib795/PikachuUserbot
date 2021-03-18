@@ -13,7 +13,6 @@ import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot
 from logging import getLogger; pikalog = getLogger(__name__)
 import asyncio
 import uvloop
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 if bot is None:
     from pikabot.login import *
