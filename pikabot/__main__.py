@@ -17,7 +17,7 @@ async def init_pika():
   if bot is None:
       from pikabot.login import *
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-      await pika_login("STRING_SESSION"))
+      await pika_login("STRING_SESSION")
   else:
       _const= {}; _start = True; l= Var.CUSTOM_CMD
       from pikabot.login import pika_login, pika_msg
