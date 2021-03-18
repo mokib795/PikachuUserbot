@@ -15,7 +15,8 @@ from logging import getLogger; pikalog = getLogger(__name__)
 if bot is None:
     import asyncio 
     import uvloop
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()) 
+    loop = uvloop.new_event_loop()
+    asyncio.set_event_loop(loop) 
     from pikabot.login import *
     pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
     _Pika_Loop_ = asyncio.get_event_loop()
@@ -23,7 +24,8 @@ if bot is None:
 else:
     import asyncio 
     import uvloop
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+    loop = uvloop.new_event_loop()
+    asyncio.set_event_loop(loop)
     _Pika_Loop_ = asyncio.get_event_loop()
     _const= {}; _start = True; l= Var.CUSTOM_CMD
     from pikabot.login import pika_login, pika_msg
