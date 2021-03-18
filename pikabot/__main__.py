@@ -18,10 +18,12 @@ asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 if bot is None:
     from pikabot.login import *
     pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
-    _Pika_Loop_ = asyncio.get_event_loop()
+    _Pika_Loop_ = uvloop.get_event_loop()
+    asyncio.set_event_loop(loop)
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
-    _Pika_Loop_ = asyncio.get_event_loop()
+    _Pika_Loop_ = uvloop.get_event_loop()
+    asyncio.set_event_loop(_Pika_Loop_)
     _const= {}; _start = True; l= Var.CUSTOM_CMD
     from pikabot.login import pika_login, pika_msg
     _logstr_ = "__{}__: Connected 🔥"
@@ -149,5 +151,5 @@ else:
             await bot.disconnect()
         else:
             await bot.run_until_disconnected()
-    
+   
     _Pika_Loop_.run_until_complete(connecting_clients())
