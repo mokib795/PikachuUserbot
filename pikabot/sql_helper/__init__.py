@@ -16,8 +16,8 @@ def start() -> scoped_session:
 
 
 try:
-    Base = declarative_base()
-    PikaDB = start()
+    BASE = declarative_base()
+    SESSION = start()
 except AttributeError as e:
     # this is a dirty way for the work-around required for #23
     print("DB_URI is not configured. Features depending on the database might have issues.")
