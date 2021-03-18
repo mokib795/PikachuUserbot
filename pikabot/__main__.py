@@ -11,11 +11,11 @@
 
 import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a
 from logging import getLogger; pikalog = getLogger(__name__)
-import asyncio
+import asyncio; from pikabot.login import *
+
 
 async def init_pika():
   if bot is None:
-      from pikabot.login import *
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
       await pika_login("STRING_SESSION")
   else:
