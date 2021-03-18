@@ -9,15 +9,21 @@
 #
 # All rights reserved 
 
-import os, telethon, telethon.utils, asyncio, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a
+import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a
 from logging import getLogger; pikalog = getLogger(__name__)
 
-if bot is None: 
+if bot is None:
+    import asyncio 
+    import uvloop
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()) 
     from pikabot.login import *
     pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
     _Pika_Loop_ = asyncio.get_event_loop()
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
+    import asyncio 
+    import uvloop
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
     _Pika_Loop_ = asyncio.get_event_loop()
     _const= {}; _start = True; l= Var.CUSTOM_CMD
     from pikabot.login import pika_login, pika_msg
