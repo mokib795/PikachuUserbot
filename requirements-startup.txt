@@ -54,6 +54,7 @@ youtube-dl
 jikanpy
 psutil
 pyLyrics
+uvloop
 wheel
 cairosvg
 lottie
