@@ -17,11 +17,8 @@ async def init_pika():
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
       await pika_login("STRING_SESSION")
   else:
-      _const= {}; _start = True; l= Var.CUSTOM_CMD
-      from pikabot.login import pika_login, pika_msg
-      _logstr_ = "__{}__: Connected 🔥"
-      _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME)
-      import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
+      _const= {}; _start = True; l= Var.CUSTOM_CMD; from pikabot.login import pika_login, pika_msg; _logstr_ = "__{}__: Connected 🔥"; _logstr2_ = "__{}__: Started Login Assistent, Do /start at {}'s PM".format(_const, BF_BOTNAME); import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
+      
       if _start: 
           await tgbot.start(); tgbot.me = await tgbot.get_me(); tgbot.PikaAsst = {}; tgbot.uid = telethon.utils.get_peer_id(tgbot.me); pikalog.info(_logstr_.format("TGBOT")); msg = _logstr_.format("_TGBOT_") + '\n\n'; _logpika = await tgbot.send_message(BOTLOG_CHATID, msg)
           if bot: 
@@ -80,17 +77,26 @@ async def init_pika():
                       pika_assistant(shortname.replace(".py", ""))
           __load_plugs__()
 
-          msg += "Sucessfully Loaded Plugins\n\n" 
-          await pika_msg(_logpika, msg)
-          from ._core import _verify
-          await _verify() 
-          msg += "**Pikabot Started Sucessfully**"
-          await pika_msg(_logpika, msg)
-
+          msg += "Sucessfully Loaded Plugins\n\n"; await pika_msg(_logpika, msg); from ._core import _verify; await _verify(); msg += "**Pikabot Started Sucessfully**"; await pika_msg(_logpika, msg)
+      
       if len(argv) not in (1, 3, 4):
-          await bot.disconnect()
+          if bot: 
+              await bot.disconnect()
+          if bot2: 
+              await bot2.disconnect()
+          if bot3: 
+              await bot3.disconnect()
+          if bot4: 
+              await bot4.disconnect()
       else:
-          await bot.run_until_disconnected()
+          if bot: 
+              await bot.run_until_disconnected()
+          if bot2: 
+              await bot2.run_until_disconnected()
+          if bot3: 
+              await bot3.run_until_disconnected()
+          if bot4: 
+              await bot4.run_until_disconnected()
 
 pikaloop = asyncio.get_event_loop()  
 pikaloop.run_until_complete(init_pika())
