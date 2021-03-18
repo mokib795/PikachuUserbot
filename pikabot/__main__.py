@@ -9,8 +9,8 @@
 #
 # All rights reserved 
 
-import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a; import os.environ.get as _get_; from logging import getLogger; pikalog = getLogger(__name__); import asyncio; from pikabot.login import *
-l = _get_("CUSTOM_CMD", ".")
+import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a; from logging import getLogger; pikalog = getLogger(__name__); import asyncio; from pikabot.login import *
+l = os.environ.get("CUSTOM_CMD", ,".") 
 
 async def init_pika():
   if bot is None:
