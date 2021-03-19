@@ -38,8 +38,6 @@ def is_gbanned(sender, pika_id):
         _pikaG = SESSION.query(Gban).get((str(sender), str(pika_id)))
         if _pikaG:
             return str(_pikaG.reason)
-    except: 
-        return None
     finally:
         SESSION.close()
 
