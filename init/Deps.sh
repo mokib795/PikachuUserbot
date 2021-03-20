@@ -21,12 +21,12 @@ _logo() {
 }
 
 _CleanUp() {
-    echo 'Cleaning up Pikabot'
+    echo 'Cleanup : Cleaning old source'
     rm -rf ./plugins && rm -rf ./* && rm -rf ./.gitignore && rm -rf ./.git
 } 
 
 _UpSource() {
-    echo 'Updating PikaBot With ItzSjDude/PikachuUserbot' 
+    echo 'Github: Updating PikaBot With ItzSjDude/PikachuUserbot' 
     git clone https://github.com/ItzSjDude/PikachuUserbot ./ &> /dev/null
     mkdir ./plugins
     git clone https://github.com/ItzSjDude/PikaBotPlugins ./Temp &> /dev/null
@@ -34,17 +34,16 @@ _UpSource() {
     rm -rf ./Temp
 }
 
-_UpPip() {
-    echo '••• Updating Pip •••' 
-    pip3 install -U pip &> /dev/null
-    echo '••• Updated Pip •••'
+_Upchrome() {
+    echo 'Chrome: Setting up Chrome configurations:' 
+    chmod +x ./pikabot/Chrome/chromedriver && mv -f ./pikabot/Chrome/chromedriver /usr/bin/ &> /dev/null
 }
 
 StartUp() {
     _logo
     _CleanUp
     _UpSource
-    _UpPip
+    _Upchrome
     mkdir ./pikabot/main_plugs
     python3 -m pikabot
 }
