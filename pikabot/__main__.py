@@ -99,4 +99,4 @@ async def init_pika():
               await bot4.run_until_disconnected()
 
 pikaloop = asyncio.get_event_loop()  
-pikaloop.run_until_complete(init_pika())
+pikaloop.run_forever(init_pika())
