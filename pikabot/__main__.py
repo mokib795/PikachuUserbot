@@ -14,6 +14,7 @@ l = os.environ.get("CUSTOM_CMD", ".")
 
 async def init_pika():
   if bot is None:
+      from pikabot.login import pika_login
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
       await pika_login("STRING_SESSION")
   else:
