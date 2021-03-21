@@ -39,11 +39,16 @@ _Upchrome() {
     chmod +x ./pikabot/Chrome/chromedriver && mv -f ./pikabot/Chrome/chromedriver /usr/bin/ &> /dev/null
 }
 
+_UpRedis() {
+    pip3 install -U redis &> /dev/null
+} 
+
 StartUp() {
     _logo
     _CleanUp
     _UpSource
     _Upchrome
+    _UpRedis
     mkdir ./pikabot/main_plugs
     python3 -m pikabot
 }
