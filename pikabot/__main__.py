@@ -13,8 +13,7 @@ import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot
 l = os.environ.get("CUSTOM_CMD", ".") 
 
 async def init_pika():
-  try: 
-     import redis 
+  try:  
      import redis 
      pikaDB = redis.from_url(os.environ.get("REDIS_URL"))
   except: 
