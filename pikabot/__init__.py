@@ -69,6 +69,13 @@ else:
 const = {} 
 BF_BOT=Var.TG_BOT_TOKEN_BF_HER
 BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
+
+try:  
+   import redis 
+   pikaDB = redis.from_url(os.environ.get("REDIS_URL"))
+except: 
+   return 
+
 if Var.STR1:    
     bot = TelegramClient(StringSession(Var.STR1),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
 else: 
