@@ -13,6 +13,13 @@ import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot
 l = os.environ.get("CUSTOM_CMD", ".") 
 
 async def init_pika():
+  try: 
+     import redis 
+     import redis 
+     pikaDB = redis.from_url(os.environ.get("REDIS_URL"))
+  except: 
+      pass 
+
   if bot is None:
       from pikabot.login import pika_login
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
