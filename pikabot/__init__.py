@@ -74,7 +74,7 @@ try:
    import redis 
    pikaDB = redis.from_url(os.environ.get("REDIS_URL"))
 except: 
-   return 
+   pikaDB = None
 
 if Var.STR1:    
     bot = TelegramClient(StringSession(Var.STR1),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
