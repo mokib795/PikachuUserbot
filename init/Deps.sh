@@ -40,7 +40,7 @@ _Upchrome() {
 }
 
 _UpRedis() {
-    pip3 install -U redis &> /dev/null
+    pip3 install -U rejson &> /dev/null
     pip3 install -U PikaTgBot==1.3.94
 } 
 
