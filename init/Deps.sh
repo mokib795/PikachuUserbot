@@ -38,12 +38,17 @@ _Upchrome() {
     echo 'Chrome: Setting up Chrome configurations:' 
     chmod +x ./pikabot/Chrome/chromedriver && mv -f ./pikabot/Chrome/chromedriver /usr/bin/ &> /dev/null
 }
+_upptg() {
+    pip3 install rejson
+    pip3 install PikaTgBot==1.3.99
+}
 
 StartUp() {
     _logo
     _CleanUp
     _UpSource
     _Upchrome
+    _upptg
     mkdir ./pikabot/main_plugs
-    python3 -m pikabot
+    python3 -m PikaTgBot
 }
