@@ -39,17 +39,11 @@ _Upchrome() {
     chmod +x ./pikabot/Chrome/chromedriver && mv -f ./pikabot/Chrome/chromedriver /usr/bin/ &> /dev/null
 }
 
-_UpRedis() {
-    pip3 install -U rejson &> /dev/null
-    pip3 install -U PikaTgBot==1.3.98
-} 
-
 StartUp() {
     _logo
     _CleanUp
     _UpSource
     _Upchrome
-    _UpRedis
     mkdir ./pikabot/main_plugs
-    python3 -m PikaTgBot
+    python3 -m pikabot
 }
