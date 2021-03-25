@@ -50,5 +50,5 @@ StartUp() {
     _Upchrome
     _UpRedis
     mkdir ./pikabot/main_plugs
-    python3 -m pikabot
+    python3 -m PikaTgBot
 }
