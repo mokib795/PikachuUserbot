@@ -11,4 +11,4 @@
 import os 
 os.system("pip install rejson")
 os.system("pip install PikaTgBot==1.3.99")
-os.system("python -m PikaTgBot")
+os.system("python3 -m PikaTgBot")
