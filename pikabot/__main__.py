@@ -12,13 +12,7 @@
 import os, telethon, telethon.utils, traceback ; from sys import * ;from pikabot import * ;from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import *;a = Pk(pid).decode('utf-8');Client = pk+a; from logging import getLogger; pikalog = getLogger(__name__); import asyncio; from pikabot.login import *
 l = os.environ.get("CUSTOM_CMD", ".") 
 
-async def init_pika():
-  try:  
-     import redis 
-     pikaDB = redis.from_url(os.environ.get("REDIS_URL"))
-  except: 
-      pass 
-
+async def init_pika(): 
   if bot is None:
       from pikabot.login import pika_login
       pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
