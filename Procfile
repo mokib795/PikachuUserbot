@@ -1,1 +1,1 @@
-Pikabot: bash startpika
+Sexybot: bash startsexy
