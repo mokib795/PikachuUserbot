@@ -1,23 +1,23 @@
-# Pikachu Userbot 
+# SEXY BOT
 
 <p align="center">
-<img src="https://telegra.ph/file/9987086d1312275151b24.png" alt="PIKACHU USERBOT">
+
 
 ᴀ ᴜꜱᴇʀʙᴏᴛ ᴡɪᴛʜ ʙᴇꜱᴛ ꜰᴇᴀᴛᴜʀᴇꜱ ,ꜱᴇᴄᴜʀɪᴛʏ ᴀɴᴅ ꜱᴏᴍᴇ ꜰᴜɴɴʏ ᴍᴏᴅꜱ ᴛᴏ ʙᴏᴏꜱᴛ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ᴇxᴘᴇʀɪᴇɴᴄᴇ
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/ItzSjDude/PikachuUserbot)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/mokib795/sexybot)
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-## **By ItSjDude**
+## **By TURU_LOB_0**
 ## HOW TO DEPLOY 
 
 ## Installing Heroku 
 
 ### The Easy Way
 
-**1.Generate String session from** [![Repl.it](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](http://userbot.itzsjdude.repl.run/)
+**1.Generate String session from** [![Repl.it](https://img.shields.io/badge/REPL%20RUN-Run%20Online-blue.svg)](http://userbot.mokib795.repl.run/)
 
-**2.Click on** [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ItzSjDude/PikachuUserbot)
+**2.Click on** [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mokib795/sexybot)
  
 **3.Fill up required fields like Appid,Api hash, String Sesson , Bot token nd Bot username**
 
@@ -27,7 +27,7 @@
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/ItzSjDude/PikachuUserbot
+git clone https://github.com/mokib795/sexybot
 cd PikachuUserbot
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
